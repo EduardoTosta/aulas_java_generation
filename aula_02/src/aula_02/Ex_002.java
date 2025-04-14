@@ -21,8 +21,16 @@ public class Ex_002 {
 		float media = aux/4;
 		System.out.printf("Média: %.2f", media);
 		
-		leia.close();
+		if(media<5) {
+			System.out.println("\nReprovado!");
+		}else if(media >= 5 && media <=6) {
+			System.out.println("\nRecuperação!");
+		}else {
+			System.out.println("\nAprovado!");
+		}
 		
+		
+		leia.close();
 		
 	}
 
