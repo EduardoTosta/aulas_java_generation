@@ -9,31 +9,31 @@ public class Calculadora {
 		
 		double resultado;
 		
-		System.out.println("Digite o primeiro valor: ");
+		System.out.printf("Digite o primeiro valor: ");
 		double numero_1 = leia.nextDouble();
-		System.out.println("Digite o segundo valor: ");
+		System.out.printf("Digite o segundo valor: ");
 		double numero_2 = leia.nextDouble();
-		System.out.println("Digite a operação: ");
-		String operacao = leia.toString();
+		System.out.printf("Digite a operação: ");
+		char operacao = leia.next().charAt(0);
 		
 		
 		switch(operacao) {
-		case "x":
+		case 'x':
 			resultado = numero_1*numero_2;
 			System.out.println("Resultado: " + resultado);
 			break;
 		
-		case "-":
+		case '-':
 			resultado = numero_1-numero_2;
 			System.out.println("Resultado: " + resultado);
 			break;
 			
-		case "+":
+		case '+':
 			resultado = numero_1+numero_2;
 			System.out.println("Resultado: " + resultado);
 			break;
 			
-		case "/":
+		case '/':
 			resultado = numero_1/numero_2;
 			System.out.println("Resultado: " + resultado);
 			break;
