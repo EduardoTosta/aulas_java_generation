@@ -15,9 +15,5 @@ public class Ex_001 {
 		
 		System.out.printf("Novo salário: %.2f", novoSalario);
 		
-		
-		
-		
-		
 	}
 }
