@@ -8,18 +8,20 @@ public class Ex_002 {
 		
 		Scanner leia = new Scanner(System.in);
 		
-		System.out.println("Digite a nota 1: ");
-		float nota1 = leia.nextFloat();
-		System.out.println("Digite a nota 2: ");
-		float nota2 = leia.nextFloat();
-		System.out.println("Digite a nota 3: ");
-		float nota3 = leia.nextFloat();
-		System.out.println("Digite a nota 4: ");
-		float nota4 = leia.nextFloat();
+		float[] nota = new float[4];
+		float aux = 0;
 		
-		float media = (nota1 + nota2 + nota3 + nota4)/4;
+		for(int i = 0; i < 4; i++) {
+			System.out.println("Digite a nota " + (i+1) + ": ");
+			nota[i] = leia.nextFloat();
+			
+			aux += nota[i];
+		}
 		
+		float media = aux/4;
 		System.out.printf("Média: %.2f", media);
+		
+		leia.close();
 		
 		
 	}
