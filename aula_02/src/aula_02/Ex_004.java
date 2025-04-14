@@ -7,16 +7,15 @@ public class Ex_004 {
 		
 		Scanner leia = new Scanner(System.in);
 		
-		System.out.println("Digite a numero 1: ");
-		float numero1 = leia.nextFloat();
-		System.out.println("Digite a numero 2: ");
-		float numero2 = leia.nextFloat();
-		System.out.println("Digite a numero 3: ");
-		float numero3 = leia.nextFloat();
-		System.out.println("Digite a numero 4: ");
-		float numero4 = leia.nextFloat();
+		float[] numero = new float[4];
+		float aux = 0;
 		
-		float calculo = (numero1*numero2)-(numero3*numero4);
+		for(int i = 0; i < 4; i++) {
+			System.out.println("Digite a nota " + (i+1) + ": ");
+			numero[i] = leia.nextFloat();
+		}
+		
+		float calculo = (numero[0]*numero[1])-(numero[2]*numero[3]);
 		
 		System.out.printf("Diferença: %.2f", calculo);
 		
