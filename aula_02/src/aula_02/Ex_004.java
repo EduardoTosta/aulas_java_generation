@@ -19,6 +19,5 @@ public class Ex_004 {
 		
 		System.out.printf("Diferença: %.2f", calculo);
 		
-		
-	}
+		}
 }
