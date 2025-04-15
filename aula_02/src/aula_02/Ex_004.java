@@ -6,9 +6,8 @@ public class Ex_004 {
 	public static void main(String[] args) {
 		
 		Scanner leia = new Scanner(System.in);
-		
 		float[] numero = new float[4];
-		float aux = 0;
+		
 		
 		for(int i = 0; i < 4; i++) {
 			System.out.println("Digite a nota " + (i+1) + ": ");
