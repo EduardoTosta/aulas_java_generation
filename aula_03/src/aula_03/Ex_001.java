@@ -5,18 +5,15 @@ import java.util.Scanner;
 public class Ex_001 {
 
 	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
 		int a,b,c,soma;
 		
-		Scanner leia = new Scanner(System.in);
-		
-		do {
-			System.out.println("Digite o primeiro numero: ");
+		System.out.println("Digite o primeiro numero: ");
 			a = leia.nextInt();
-			System.out.println("Digite o segundo numero: ");
+		System.out.println("Digite o segundo numero: ");
 			b = leia.nextInt();
-			System.out.println("Digite o terceiro numero: ");
+		System.out.println("Digite o terceiro numero: ");
 			c = leia.nextInt();
-		}while(!leia.hasNextInt());
 		
 		soma = a+b;
 		
@@ -31,10 +28,6 @@ public class Ex_001 {
 		
 		
 		leia.close();
-		
-		
-		
-		
 		
 	}
 
