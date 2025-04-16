@@ -9,14 +9,13 @@ public class Tabuada {
 		Scanner leia = new Scanner(System.in);
 		
 		//Definição das Váriáveis
+		int numero, numero_2,  resultado;
+		
+		//Entrada de Dados
 		System.out.print("Digite a tabuada que deseja criar: ");
-		int numero = leia.nextInt();
-		
+		numero = leia.nextInt();
 		System.out.print("Digite até onde quer que a tabuada vá: ");
-		int numero_2 = leia.nextInt();
-		
-		int  resultado;
-		
+		numero_2 = leia.nextInt();
 		
 		//Titulo com fins visuais
 		System.out.println("==============");
@@ -33,6 +32,6 @@ public class Tabuada {
 			System.out.printf("\n%d x %d = %d", numero,  i,  resultado);
 		}
 
-	}
+		leia.close();	}
 
 }
