@@ -68,10 +68,6 @@ public class parOuImpar {
 		}while(verificarBoolean);
 		
 		
-		
-		
-		
-		
 	}
 
 }
