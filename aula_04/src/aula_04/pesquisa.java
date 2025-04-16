@@ -10,11 +10,11 @@ public class pesquisa {
 		Scanner leia = new Scanner(System.in);
 		String[] genero = {"Mulher Cis", "Homem Cis","Não Binário","Mulher Trans","Homem Trans","Outro"};
 		String[] atuacao = {"Backend", "Frontend", "Mobile", "FullStack"};
-		int idade = 0, contGenero = 0, auxGen = 0, auxAt = 0, somaIdade = 0, somaPesquisa = 0;
-		int mulherFront = 0, homemMobile = 0, naoBinarioFullstack = 0;
+		int idade = 0, auxGen = 0, auxAt = 0, somaIdade = 0, somaPesquisa = 0;
+		int mulherFront = 0, homemMobile = 0, naoBinarioFullstack = 0, contBackend = 0;
 		char verificarChar;
 		boolean verificarBoolean = true, idadeValida = true, generoValido = true, atuacaoValida = true;
-;
+
 		
 		//Título
 		System.out.println("======================================================");
@@ -49,7 +49,7 @@ public class pesquisa {
 					generoValido = false;
 					leia.nextLine();
 				}else {
-					System.out.println("Insira uma código válido!");
+					System.out.println("Insira um código válido!");
 					generoValido = true;
 				}
 			}while(generoValido);
@@ -66,19 +66,24 @@ public class pesquisa {
 					atuacaoValida = false;
 					leia.nextLine();
 				}else {
-					System.out.println("Insira uma código válido!");
+					System.out.println("Insira um código válido!");
 					atuacaoValida = true;
 				}
 			}while(atuacaoValida);			
-			somaPesquisa++;
+			
 			
 			//Processamento
+			somaPesquisa++;
+			if(auxAt == 1) {
+				contBackend++;
+			}
+			
 			if((auxGen == 1 || auxGen == 4) && auxAt == 2) {
 				mulherFront++;
 			}else if ((auxGen == 2 || auxGen == 5) && auxAt == 3){
 				if(idade>40) 
 					homemMobile++;	
-			}else if (auxGen == 3 && auxAt == 4) {
+			}else if ((auxGen == 3 && auxAt == 4) && idade < 30) {
 				naoBinarioFullstack++;
 			}
 
@@ -95,17 +100,22 @@ public class pesquisa {
 			}
 		}while(verificarBoolean);
 		
+		//calculo média
 		float media = (float) somaIdade / somaPesquisa;
+		
 		
 		//Resultados 
 		System.out.println("\n===== RESULTADO DA PESQUISA =====");
-		System.out.println("Total de pessoas desenvolvedoras: " + somaPesquisa);
-		System.out.println("Média de idade: " + media);
-		System.out.println("Quantidade de Mulheres (Cis ou Trans) desenvolvedoras Frontend: " + mulherFront);
-		System.out.println("Quantidade de Homens (Cis ou Trans) desenvolvedores Mobile com mais de 40 anos: " + homemMobile);
-		System.out.println("Quantidade de Pessoas Não Binárias desenvolvedoras FullStack: " + naoBinarioFullstack);
+		System.out.println("Número de pessoas desenvolvedoras Backend: " + contBackend);
+		System.out.println("Número de Mulheres (Cis e Trans) desenvolvedoras Frontend: " + mulherFront);
+		System.out.println("Número de Homens (Cis e Trans) desenvolvedores Mobile maiores de 40 anos: " + homemMobile);
+		System.out.println("Número de Não Binários desenvolvedores FullStack menores de 30 anos: " + naoBinarioFullstack);
+		System.out.println("Número total de pessoas que responderam à pesquisa: " + somaPesquisa);
+		System.out.printf("Média de idade das pessoas que responderam à pesquisa: %.2f\n", media);
 
 
+
+		leia.close();
 	}
 
 }
