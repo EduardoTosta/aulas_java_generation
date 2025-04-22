@@ -1,5 +1,5 @@
 
-# Aulas Java - Generation Brasil 
+# Aulas Java - Generation Brasil ☕
 
 Este repositório contém exercícios, exemplos e conteúdos desenvolvidos durante a trilha de **Java** da [Generation Brasil](https://brazil.generation.org/).  
 Aqui você encontrará códigos comentados e organizados por aula, com foco na prática de conceitos fundamentais da linguagem Java e no desenvolvimento de habilidades em programação orientada a objetos.
