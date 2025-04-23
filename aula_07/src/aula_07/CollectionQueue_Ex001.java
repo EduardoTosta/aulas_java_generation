@@ -43,7 +43,7 @@ public class CollectionQueue_Ex001 {
 			case 1: //Add pessoas na fila
 				System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 				System.out.println();
-				System.out.println("                ADICIONAR PESSOAS");
+				System.out.println("                ADICIONAR CLIENTES");
 				System.out.println();
 				System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 				leia.nextLine();
@@ -54,20 +54,20 @@ public class CollectionQueue_Ex001 {
 				//Excecução do programa
 				do {
 					//Le o input do usuário e o converte para Uooer Case
-					System.out.println("Digite o nome e sobrenome da pessoa que deseja ADICIONAR: ");
+					System.out.println("Digite o nome e sobrenome do cliente que deseja ADICIONAR: ");
 					String nomePessoa = leia.nextLine().toUpperCase();
 					
 					//Verifica se a pessoa ja esta na lista
 						if(filaBanco.contains(nomePessoa)) {
-							System.out.println("Esta pessoa ja esta na fila!");
+							System.out.println("Este cliente ja esta na fila!");
 						}else {
 							filaBanco.add(nomePessoa);
-							System.out.println("Pessoa adicionada com sucesso!");
+							System.out.println("Cliente adicionado com sucesso!");
 						}
 					
 					
 					//Controlador de excecução do case
-					System.out.println("Deseja adicionar mais alguem? (Y/N)");
+					System.out.println("Deseja adicionar mais algum cliente? (Y/N)");
 					String auxBoolean = leia.nextLine().toUpperCase();
 					
 					if(auxBoolean.equals("N")) 
@@ -82,13 +82,17 @@ public class CollectionQueue_Ex001 {
 				System.out.println("                Fila atual");
 				System.out.println();
 				System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
-				System.out.println(filaBanco);
+				if(filaBanco.isEmpty()) {
+						System.out.println("A fila esta vazia!");
+					}else {
+						System.out.println(filaBanco);
+					}
 				break;
 				
 			case 3://Remove pessoas na fila
 				System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 				System.out.println();
-				System.out.println("                REMOVER PESSOAS");
+				System.out.println("                REMOVER CLIENTES");
 				System.out.println();
 				System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 				leia.nextLine();
@@ -99,19 +103,19 @@ public class CollectionQueue_Ex001 {
 				//Excecução do programa
 				do {
 					//Le o input do usuário e o converte para Upper Case
-					System.out.println("Digite o nome e sobrenome da pessoa que deseja REMOVER: ");
+					System.out.println("Digite o nome e sobrenome do cliente que deseja REMOVER: ");
 					String nomePessoa = leia.nextLine().toUpperCase();
 					
 					//Verifica se a pessoa esta na lista
 						if(filaBanco.contains(nomePessoa)) {
 							filaBanco.remove(nomePessoa);
-							System.out.println("Pessoa removida com sucesso!");
+							System.out.println("Cliente removido com sucesso!");
 						}else {
-							System.out.println("Esta pessoa não está na fila!");
+							System.out.println("Este cliente não está na fila!");
 						}
 					
 					//Controlador de excecução do case
-					System.out.println("Deseja remover mais alguem? (Y/N)");
+					System.out.println("Deseja remover mais algum cliente? (Y/N)");
 					String auxBoolean = leia.nextLine().toUpperCase();
 					
 					if(auxBoolean.equals("N")) 
