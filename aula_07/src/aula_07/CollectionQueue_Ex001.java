@@ -193,6 +193,7 @@ public class CollectionQueue_Ex001 {
 		System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 		
 		leia.close();
+		System.exit(0);
 	}
 
 }

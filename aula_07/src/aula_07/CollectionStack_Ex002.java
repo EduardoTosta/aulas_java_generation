@@ -198,11 +198,12 @@ public class CollectionStack_Ex002 {
 		
 		System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 		System.out.println();
-		System.out.println("                Obrigado pela preferência!");
+		System.out.println("              Obrigado pela preferência!");
 		System.out.println();
 		System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 		
 		leia.close();
+		System.exit(0);
 	}
 
 }
