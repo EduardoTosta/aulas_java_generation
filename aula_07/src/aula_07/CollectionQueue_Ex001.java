@@ -21,6 +21,7 @@ public class CollectionQueue_Ex001 {
 			System.out.println("	1 - Adicionar clientes na fila\n"
 							 + "	2 - Listar todos os Clientes\n"
 							 + "	3 - Retirar clientes da Fila\n"
+							 + "	4 - Chamar o proximo cliente\n"
 							 + "	0 - Sair "
 							 );
 			System.out.println();
@@ -30,7 +31,7 @@ public class CollectionQueue_Ex001 {
 				System.out.println("Oque deseja fazer?(Escolha uma das opções acima): ");
 				escolha = leia.nextInt();
 				
-				if(escolha < 0 || escolha > 3) {
+				if(escolha < 0 || escolha > 4) {
 					System.out.println("Opção inválida!");
 				}else {
 					verificarEscolha = false;
@@ -70,8 +71,18 @@ public class CollectionQueue_Ex001 {
 					System.out.println("Deseja adicionar mais algum cliente? (Y/N)");
 					String auxBoolean = leia.nextLine().toUpperCase();
 					
-					if(auxBoolean.equals("N")) 
-						exeAddPessoa = false;
+					boolean verificarLoop = true;
+					do {
+					    if (auxBoolean.equals("N")) {
+					        exeAddPessoa = false;
+					        verificarLoop = false;
+					    } else if (auxBoolean.equals("Y")) {
+					        verificarLoop = false; // Continua o loop principal
+					    } else {
+					        System.out.println("Opção inválida. Digite apenas Y ou N.");
+					        auxBoolean = leia.nextLine().toUpperCase();
+					    }
+					} while (verificarLoop);
 					
 				}while(exeAddPessoa);
 			break; //Fim case 1
@@ -118,12 +129,55 @@ public class CollectionQueue_Ex001 {
 					System.out.println("Deseja remover mais algum cliente? (Y/N)");
 					String auxBoolean = leia.nextLine().toUpperCase();
 					
-					if(auxBoolean.equals("N")) 
-						exeRmvPessoa = false;
+					boolean verificarLoop = true;
+					do {
+					    if (auxBoolean.equals("N")) {
+					    	exeRmvPessoa = false;
+					        verificarLoop = false;
+					    } else if (auxBoolean.equals("Y")) {
+					        verificarLoop = false; //
+					    } else {
+					        System.out.println("Opção inválida. Digite apenas Y ou N.");
+					        auxBoolean = leia.nextLine().toUpperCase();
+					    }
+					} while (verificarLoop);	
 					
 				}while(exeRmvPessoa);
 			break;
+			
+			case 4://Funcão para chamar o proximo elemento da fila
+				System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+				System.out.println();
+				System.out.println("                Chamar Cliente");
+				System.out.println();
+				System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+				boolean exeChamarCliente = true;
 				
+				do {
+					if(filaBanco.isEmpty()) {
+						System.out.println("A fila está Vazia!");
+					}else {
+						System.out.println("Proximo cliente: "+filaBanco.poll());
+					}
+					
+					System.out.println("Deseja chamar o próximo cliente? (Y/N)");
+					String auxBoolean = leia.nextLine().toUpperCase();
+					
+					boolean verificarLoop = true;
+					do {
+					    if (auxBoolean.equals("N")) {
+					    	exeChamarCliente = false;
+					        verificarLoop = false;
+					    } else if (auxBoolean.equals("Y")) {
+					        verificarLoop = false; // 
+					    } else {
+					        System.out.println("Opção inválida. Digite apenas Y ou N.");
+					        auxBoolean = leia.nextLine().toUpperCase();
+					    }
+					} while (verificarLoop);
+					
+				}while(exeChamarCliente);
+				break;
 				
 			case 0:
 				exePrograma = false;
@@ -134,7 +188,7 @@ public class CollectionQueue_Ex001 {
 		
 		System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 		System.out.println();
-		System.out.println("                Obrigado!");
+		System.out.println("                Obrigado pela preferência!");
 		System.out.println();
 		System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 		
