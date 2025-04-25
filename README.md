@@ -15,6 +15,8 @@ Os conteúdos estão organizados em pastas, seguindo a numeração e temas das a
 - `aula_03/`: Operadores lógicos, condicionais e estruturas de decisão.
 - `aula_04/`: Estruturas de repetição (for, while, do-while).
 - `aula_05/`: Vetores e arrays multidimensionais.
+- `aula_06/`: Coleções e Sets. 
+- `aula_07/`: Classes e Objetos. 
 - *(mais pastas serão adicionadas conforme as aulas avançam)*
 
 ---
